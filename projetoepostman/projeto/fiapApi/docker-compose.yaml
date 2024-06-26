@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+ postgres:
+  container_name: postgres
+  image: postgres:latest
+  restart: always
+  environment:
+    - POSTGRES_DB=fiapi
+    - POSTGRES_USER=fiap
+    - POSTGRES_PASSWORD=fiapsenha
+  ports:
+    - '5432:5432'
